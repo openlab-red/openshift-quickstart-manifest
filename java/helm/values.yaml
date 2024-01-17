@@ -1,0 +1,7 @@
+---
+app:
+  envs:
+    WORKSPACE_NAMESPACE: bit-play
+  image: quay.io/bit-play/openshift-quickstart:1.0.0-SNAPSHOT
+  ports:
+    http: 8080

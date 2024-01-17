@@ -1,0 +1,17 @@
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    app.openshift.io/vcs-url: <<unknown>>
+  labels:
+    app.kubernetes.io/name: openshift-quickstart
+    app.kubernetes.io/managed-by: quarkus
+    app.openshift.io/runtime: quarkus
+  name: openshift-quickstart
+spec:
+  port:
+    targetPort: http
+  to:
+    kind: Service
+    name: openshift-quickstart

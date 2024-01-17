@@ -1,0 +1,3 @@
+---
+app:
+  image: quay.io/bit-play/openshift-quickstart:1.0.0-SNAPSHOT

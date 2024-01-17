@@ -1,0 +1,36 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    app.openshift.io/vcs-url: <<unknown>>
+  labels:
+    app.kubernetes.io/managed-by: quarkus
+    app.openshift.io/runtime: quarkus
+    app.kubernetes.io/name: openshift-quickstart
+  name: openshift-quickstart
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: openshift-quickstart
+  template:
+    metadata:
+      annotations:
+        app.openshift.io/vcs-url: <<unknown>>
+      labels:
+        app.kubernetes.io/managed-by: quarkus
+        app.openshift.io/runtime: quarkus
+        app.kubernetes.io/name: openshift-quickstart
+    spec:
+      containers:
+        - env:
+            - name: WORKSPACE_NAMESPACE
+              value: {{ .Values.app.envs.WORKSPACE_NAMESPACE }}
+          image: {{ .Values.app.image }}
+          imagePullPolicy: Always
+          name: openshift-quickstart
+          ports:
+            - containerPort: {{ .Values.app.ports.http }}
+              name: http
+              protocol: TCP

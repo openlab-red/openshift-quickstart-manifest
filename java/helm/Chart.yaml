@@ -1,0 +1,4 @@
+---
+name: openshift-quickstart
+version: 1.0.0-SNAPSHOT
+apiVersion: v2
