@@ -1,3 +1,0 @@
----
-app:
-  image: quay.io/quickstart/java:devspaces-admin-1742
