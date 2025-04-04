@@ -1,0 +1,3 @@
+image:
+  repository: quay.io/quickstart/js
+  tag: devspaces-admin-1200
