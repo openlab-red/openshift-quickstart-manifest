@@ -7,6 +7,6 @@ metadata:
 data:
   app.config.json: |
     {
-      "baseUrl": "https://nodejs-backend-{{ .Release.Namespace }}.{{ .Values.baseDomain}}/api"
+      "baseUrl": "https://{{ .Values.backendName}}-{{ .Release.Namespace }}.{{ .Values.baseDomain}}/api"
     }
 
