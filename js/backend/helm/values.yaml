@@ -89,3 +89,32 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+postgresql:
+  enabled: True
+  initdb:
+    scripts:
+      schema.sql: |
+        CREATE TABLE messages (
+            id SERIAL PRIMARY KEY,
+            text TEXT
+        );
+    username: postgres
+    password: pass
+  primary:
+    persistence:
+      mountPath: /var/lib/pgsql
+      size: 10Gi
+    resources:
+      requests:
+        cpu: 100m
+        memory: 1Gi
+      limits:
+        cpu: '1'
+        memory: 2Gi
+  postgresqlDataDir: /var/lib/pgsql/data
+  auth:
+    username: postgres
+    postgresPassword: pass
+    postgresqlPostgresPassword: root
+    database: db
