@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: quay.io/mmascia/js/frontend
+  repository: quay.io/quickstart/js/frontend
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: latest
@@ -91,5 +91,9 @@ tolerations: []
 
 affinity: {}
 
+# TODO refresh with the new URL
+# baseDomain: apps.cluster-2jp75.2jp75.sandbox2851.opentlc.com
+# backendName: java-app
+# test cluster
 baseDomain: apps.cluster-9gpzv.9gpzv.sandbox2541.opentlc.com
-backendName: java-app
+backendName: js-backend
