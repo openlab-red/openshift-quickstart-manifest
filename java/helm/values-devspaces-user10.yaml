@@ -1,0 +1,3 @@
+image:
+  repository: quay.io/quickstart/java/quarkus
+  tag: devspaces-user10-0919
