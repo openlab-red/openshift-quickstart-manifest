@@ -1,0 +1,3 @@
+image:
+  repository: quay.io/quickstart/golang/server
+  tag: devspaces-user10-0922
